@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Movie Ticket Booking</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="home">
+        <div class="allHomeSection">
+          <div class="movieName">
+            <h2>Spider-Man Across the Spider-Verse</h2>
+          </div>
+          <div class="movieDetails">
+            <p>
+              Spider-Man: Across the Spider-Verse (2023) follows Miles Morales,
+              who teams up with Gwen Stacy and a multiversal "Spider-Society"
+              led by Miguel O'Hara to fight a new villain, The Spot. The film
+              explores themes of destiny, with Miles clashing with other Spiders
+              over protecting his loved ones.
+            </p>
+          </div>
+          <div class="BookTicket">
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+        </div>
+        <div class="allMovieSections">
+          <div class="movieCard">
+            <img src="./dhurandhar.jpg" alt="image" />
+            <h3>Dhurandhar</h3>
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+          <div class="movieCard">
+            <img src="./Joker (2019).jpg" alt="image" />
+            <h3>Joker</h3>
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+          <div class="movieCard">
+            <img src="./Jonny wick.jpg" alt="image" />
+            <h3>John Wick</h3>
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+          <div class="movieCard">
+            <img src="./jujtsu.jpg" alt="image" />
+            <h3>Jujutsu Kaisen</h3>
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+          <div class="movieCard">
+            <img src="./Shadow Over Solaris.jpg" alt="image" />
+            <h3>Shadow Over Solaris</h3>
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+          <div class="movieCard">
+            <img
+              src="./Zodiac.jpg
+            "
+              alt="image"
+            />
+            <h3>Zodiac</h3>
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+          <div class="movieCard">
+            <img src="./The Batman.jpg" alt="image" />
+            <h3>The Batman</h3>
+            <button class="bookTicketBtn">Book Ticket</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="ticketForm">
+      <div class="formContainer">
+        <h2>Book Your Ticket</h2>
+
+        <form>
+          <input type="text" placeholder="Enter Name" required />
+
+          <input type="email" placeholder="Enter Email" required />
+
+          <input type="number" placeholder="Ticket Count" min="1" required />
+
+          <div class="formBtn">
+            <button class="booked" type="submit">Book Now</button>
+            <button class="close" type="button" id="closeForm">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

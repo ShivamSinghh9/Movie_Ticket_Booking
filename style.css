@@ -1,0 +1,262 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111;
+    color:#fff;
+    line-height:1.6;
+}
+
+header{
+    background:#000;
+    padding:10px;
+    text-align:center;
+    border-bottom:2px solid #ff3c3c;
+}
+
+header h1{
+    font-size:30px;
+    color:#ff3c3c;
+}
+
+header p{
+    font-size:16px;
+    color:#ccc;
+}
+
+nav{
+    background:#2d2d2d91;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
+
+nav ul li{
+    margin:15px 20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff3c3c;
+}
+#home{
+    display:flex;
+    flex-direction:column;
+    gap: 20px;
+    padding: 30px;
+}
+#home .allHomeSection{
+    display:flex;
+    flex-direction:column;
+    gap: 30px;
+    padding: 30px;
+    height:80%;
+    transition: all 0.3s linear;
+    background:url('./spiderman.jpg') no-repeat center center/cover;
+    border-radius: 20px;
+}
+.movieName{
+    width: 40%;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.movieName h2{
+    font-size:40px;
+    color:#ececec;
+}
+.movieDetails{
+    width: 40%;
+    flex-wrap: wrap;
+}
+.movieDetails p{
+    font-size:18px;
+    color:#ffffff;
+    margin-bottom: 20px;
+}
+
+.bookTicketBtn{
+    position: relative;
+    padding: 10px 20px;
+    background:#4dacff;
+    color:#000;
+    font-size:18px;
+    font-weight:600;
+    border:none;
+    box-shadow:0 0 10px #59f6f3;
+    cursor:pointer;
+    border-radius:10px;
+    overflow:hidden;
+    z-index:1;
+    transition: all 0.3s linear;
+}
+.bookTicketBtn:hover{
+
+    box-shadow: 0 0 50px rgb(114, 255, 250);
+}
+.bookTicketBtn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#76ffe8;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.5s ease;
+    z-index:-1;
+}
+
+.bookTicketBtn:hover::before{
+    transform:scaleX(1);
+}
+.allMovieSections{
+    width:100%;
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding: 10px;
+}
+.allMovieSections .movieCard{
+   width:250px;
+    flex-shrink:0;
+    background-color: rgba(253, 253, 253, 0.701);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.695);
+    padding: 10px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.movieCard img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.allMovieSections::-webkit-scrollbar{
+    display:none;
+}
+.movieCard h3{
+    font-size: 20px;
+    color:#000000;
+}
+#ticketForm{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    visibility:hidden;
+    opacity:0;
+    transition:0.5s;
+    padding: 10px;
+}
+
+#ticketForm.active{
+    visibility:visible;
+    opacity:1;
+}
+
+.formContainer{
+    background:rgba(255, 255, 255, 0.491);
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+    padding:30px;
+    border-radius:10px;
+    width:320px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formContainer h2{
+    color:black;
+    text-align:center;
+    border-bottom: 2px solid #000000;
+}
+
+.formContainer input{
+    padding:10px;
+    font-size:16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.formBtn{
+    display: flex;
+    gap: 5px;
+}
+.formBtn .booked{
+    background:#87ff4f;
+    color:#000000;
+    font-size:18px;
+    font-weight:500;
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+    transition: all 0.3s linear;
+} 
+.formBtn .booked:hover{
+    background:#59ff00;
+}
+
+.formBtn .close{
+    background:#ff3c3c;
+    color:#fff;
+    font-size:18px;
+    font-weight:500;
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+    transition: all 0.3s linear;
+}
+.formBtn .close:hover{
+    background:#ff0000;
+}
+
+.formContainer button{
+    width: 100%;
+    padding:10px;
+    cursor:pointer;
+    border-radius: 5px;
+    border: none;
+}
