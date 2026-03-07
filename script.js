@@ -6,6 +6,7 @@ bookBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
         ticketForm.classList.add("active");
     });
+    
 });
 
 closeForm.addEventListener("click", function(){

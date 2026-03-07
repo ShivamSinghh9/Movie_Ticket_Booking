@@ -1,262 +1,619 @@
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    background:#111;
-    color:#fff;
-    line-height:1.6;
+body {
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
 }
 
-header{
-    background:#000;
-    padding:10px;
-    text-align:center;
-    border-bottom:2px solid #ff3c3c;
+header {
+  background: #000;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #ff3c3c;
 }
 
-header h1{
-    font-size:30px;
-    color:#ff3c3c;
+header h1 {
+  font-size: 30px;
+  color: #ff3c3c;
 }
 
-header p{
-    font-size:16px;
-    color:#ccc;
+header p {
+  font-size: 16px;
+  color: #ccc;
 }
 
-nav{
-    background:#2d2d2d91;
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
+nav {
+  background: #2d2d2d91;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
 }
 
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
-nav ul li{
-    margin:15px 20px;
+nav ul li {
+  margin: 15px 20px;
 }
 
-nav ul li a{
-    text-decoration:none;
-    color:#fff;
-    font-size:18px;
-    transition:0.3s;
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-nav ul li a:hover{
-    color:#ff3c3c;
+nav ul li a:hover {
+  color: #ff3c3c;
 }
-#home{
-    display:flex;
-    flex-direction:column;
-    gap: 20px;
-    padding: 30px;
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
 }
-#home .allHomeSection{
-    display:flex;
-    flex-direction:column;
-    gap: 30px;
-    padding: 30px;
-    height:80%;
-    transition: all 0.3s linear;
-    background:url('./spiderman.jpg') no-repeat center center/cover;
-    border-radius: 20px;
+#home .allHomeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  height: 80%;
+  transition: all 0.3s linear;
+  background: url("./spiderman.jpg") no-repeat center center/cover;
+  border-radius: 20px;
 }
-.movieName{
-    width: 40%;
-    flex-wrap: wrap;
-    margin-top: 100px;
+.movieName {
+  width: 40%;
+  flex-wrap: wrap;
+  margin-top: 100px;
 }
-.movieName h2{
-    font-size:40px;
-    color:#ececec;
+.movieName h2 {
+  font-size: 40px;
+  color: #ececec;
 }
-.movieDetails{
-    width: 40%;
-    flex-wrap: wrap;
+.movieDetails {
+  width: 40%;
+  flex-wrap: wrap;
 }
-.movieDetails p{
-    font-size:18px;
-    color:#ffffff;
-    margin-bottom: 20px;
-}
-
-.bookTicketBtn{
-    position: relative;
-    padding: 10px 20px;
-    background:#4dacff;
-    color:#000;
-    font-size:18px;
-    font-weight:600;
-    border:none;
-    box-shadow:0 0 10px #59f6f3;
-    cursor:pointer;
-    border-radius:10px;
-    overflow:hidden;
-    z-index:1;
-    transition: all 0.3s linear;
-}
-.bookTicketBtn:hover{
-
-    box-shadow: 0 0 50px rgb(114, 255, 250);
-}
-.bookTicketBtn::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#76ffe8;
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:transform 0.5s ease;
-    z-index:-1;
+.movieDetails p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.bookTicketBtn:hover::before{
-    transform:scaleX(1);
+.bookTicketBtn {
+  position: relative;
+  padding: 10px 20px;
+  background: #4dacff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 0 10px #59f6f3;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s linear;
 }
-.allMovieSections{
-    width:100%;
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-    overflow-y:hidden;
-    padding: 10px;
+.bookTicketBtn:hover {
+  box-shadow: 0 0 50px rgb(114, 255, 250);
 }
-.allMovieSections .movieCard{
-   width:250px;
-    flex-shrink:0;
-    background-color: rgba(253, 253, 253, 0.701);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.695);
-    padding: 10px;
-    background-size: cover;
-    display: flex;
+.bookTicketBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #76ffe8;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.bookTicketBtn:hover::before {
+  transform: scaleX(1);
+}
+.allMovieSections {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px;
+}
+.allMovieSections .movieCard {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: rgba(253, 253, 253, 0.701);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.695);
+  padding: 10px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.movieCard img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.allMovieSections::-webkit-scrollbar {
+  display: none;
+}
+.movieCard h3 {
+  font-size: 20px;
+  color: #000000;
+}
+#ticketForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 10px;
+}
+
+#ticketForm.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.formContainer {
+  background: rgba(255, 255, 255, 0.491);
+  backdrop-filter: blur(5px);
+  border: 2px solid white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formContainer h2 {
+  color: black;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+}
+
+.formContainer input {
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.formBtn {
+  display: flex;
+  gap: 5px;
+}
+.formBtn .booked {
+  background: #87ff4f;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+.formBtn .booked:hover {
+  background: #59ff00;
+}
+
+.formBtn .close {
+  background: #ff3c3c;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+.formBtn .close:hover {
+  background: #ff0000;
+}
+
+.formContainer button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+#about {
+  padding: 60px 40px;
+  background: #1a1a1a;
+}
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.aboutTitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.aboutTitle h2 {
+  font-size: 36px;
+  color: #ff3c3c;
+}
+
+.aboutContent {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aboutText {
+  width: 55%;
+}
+
+.aboutText p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.aboutImage {
+  width: 40%;
+}
+
+.aboutImage img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .aboutContent {
     flex-direction: column;
-    gap: 10px;
-    background-position: center;
-    border-radius: 10px;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-}
-.movieCard img{
+  }
+
+  .aboutText {
     width: 100%;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-.allMovieSections::-webkit-scrollbar{
-    display:none;
-}
-.movieCard h3{
-    font-size: 20px;
-    color:#000000;
-}
-#ticketForm{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    background:rgba(0,0,0,0.7);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    visibility:hidden;
-    opacity:0;
-    transition:0.5s;
-    padding: 10px;
+  }
+
+  .aboutImage {
+    width: 100%;
+  }
+
+  .aboutTitle h2 {
+    font-size: 28px;
+  }
 }
 
-#ticketForm.active{
-    visibility:visible;
-    opacity:1;
+#booking {
+  padding: 70px 40px;
+  background: #111;
 }
 
-.formContainer{
-    background:rgba(255, 255, 255, 0.491);
-    backdrop-filter: blur(5px);
-    border: 2px solid white;
-    padding:30px;
-    border-radius:10px;
-    width:320px;
-    display:flex;
+.bookingContainer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bookingTitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.bookingTitle h2 {
+  font-size: 36px;
+  color: #ff3c3c;
+}
+
+.bookingTitle p {
+  color: #bbb;
+}
+
+.bookingMovies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.bookingCard {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.4s;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeUp 0.8s forwards;
+}
+
+.bookingCard img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.bookingCard img:hover {
+  transform: scale(1.05);
+}
+
+.bookingCard h3 {
+  margin: 10px 0;
+}
+
+.bookingCard:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.bookingCard button {
+  padding: 10px 20px;
+  border: none;
+  background: #53f4ff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.bookingCard button:hover {
+  background: #00ffff;
+  color: #000000;
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#contact {
+  padding: 70px 40px;
+  background: #1a1a1a;
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contactTitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contactTitle h2 {
+  font-size: 36px;
+  color: #ff3c3c;
+}
+
+.contactTitle p {
+  color: #bbb;
+}
+
+.contactContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contactInfo {
+  width: 40%;
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contactInfo h3 {
+  color: #ff3c3c;
+  margin-bottom: 20px;
+}
+
+.contactInfo p {
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.contactForm {
+  width: 55%;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.contactForm textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contactForm button {
+  padding: 12px;
+  border: none;
+  background: #ff3c3c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.contactForm button:hover {
+  background: #ff0000;
+}
+
+@media (max-width: 768px) {
+  .contactContent {
+    flex-direction: column;
+  }
+
+  .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+}
+
+footer {
+  background: #000;
+  margin-top: 100px;
+  padding-top: 30px;
+  color: #ccc;
+}
+
+.footerGradient {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff3c3c, #ff9a3c, #ff3c3c);
+  background-size: 300%;
+  animation: gradientMove 6s linear infinite;
+  margin-bottom: 40px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px 40px 40px;
+}
+
+.footerLeft h3 {
+  color: #ff3c3c;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footerLeft p {
+  color: #aaa;
+  font-size: 15px;
+  max-width: 400px;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 20px;
+}
+
+.footerSocial a {
+  height: 60px;
+  width: 60px;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+  background: #1c1c1c;
+  padding: 12px 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.footerSocial a:hover {
+  background: #ff3c3c;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 60, 60, 0.5);
+}
+
+.footerBottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  font-size: 14px;
+  color: #777;
+}
+@media (max-width: 768px){
+
+.footerContainer{
     flex-direction:column;
+    text-align:center;
+    gap:30px;
+    padding:0 20px 30px 20px;
+}
+
+.footerLeft h3{
+    font-size:22px;
+}
+
+.footerLeft p{
+    font-size:14px;
+    max-width:100%;
+}
+
+.footerSocial{
+    justify-content:center;
+    flex-wrap:wrap;
     gap:15px;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.footerSocial a{
+    font-size:20px;
+    padding:10px 12px;
 }
 
-.formContainer h2{
-    color:black;
-    text-align:center;
-    border-bottom: 2px solid #000000;
+.footerBottom{
+    font-size:13px;
+    padding:15px;
 }
 
-.formContainer input{
-    padding:10px;
-    font-size:16px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-}
-
-.formBtn{
-    display: flex;
-    gap: 5px;
-}
-.formBtn .booked{
-    background:#87ff4f;
-    color:#000000;
-    font-size:18px;
-    font-weight:500;
-    border:none;
-    cursor:pointer;
-    border-radius:10px;
-    transition: all 0.3s linear;
-} 
-.formBtn .booked:hover{
-    background:#59ff00;
-}
-
-.formBtn .close{
-    background:#ff3c3c;
-    color:#fff;
-    font-size:18px;
-    font-weight:500;
-    border:none;
-    cursor:pointer;
-    border-radius:10px;
-    transition: all 0.3s linear;
-}
-.formBtn .close:hover{
-    background:#ff0000;
-}
-
-.formContainer button{
-    width: 100%;
-    padding:10px;
-    cursor:pointer;
-    border-radius: 5px;
-    border: none;
 }
