@@ -72,7 +72,7 @@ nav ul li a:hover {
   padding: 30px;
   height: 80%;
   transition: all 0.3s linear;
-  background: url("./spiderman.jpg") no-repeat center center/cover;
+  background: url("./kantara1.jpg") no-repeat center center/cover;
   border-radius: 20px;
 }
 .movieName {
@@ -305,23 +305,6 @@ form {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-@media (max-width: 768px) {
-  .aboutContent {
-    flex-direction: column;
-  }
-
-  .aboutText {
-    width: 100%;
-  }
-
-  .aboutImage {
-    width: 100%;
-  }
-
-  .aboutTitle h2 {
-    font-size: 28px;
-  }
-}
 
 #booking {
   padding: 70px 40px;
@@ -494,17 +477,6 @@ form {
   background: #ff0000;
 }
 
-@media (max-width: 768px) {
-  .contactContent {
-    flex-direction: column;
-  }
-
-  .contactInfo,
-  .contactForm {
-    width: 100%;
-  }
-}
-
 footer {
   background: #000;
   margin-top: 100px;
@@ -582,38 +554,99 @@ footer {
   font-size: 14px;
   color: #777;
 }
-@media (max-width: 768px){
 
-.footerContainer{
-    flex-direction:column;
-    text-align:center;
-    gap:30px;
-    padding:0 20px 30px 20px;
-}
+@media (max-width: 768px) {
+  #home {
+    padding: 15px;
+  }
 
-.footerLeft h3{
-    font-size:22px;
-}
+  #home .allHomeSection {
+    padding: 20px;
+    min-height: 300px;
+    gap: 20px;
+  }
 
-.footerLeft p{
-    font-size:14px;
-    max-width:100%;
-}
+  .movieName {
+    width: 100%;
+    margin-top: 40px;
+  }
 
-.footerSocial{
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
+  .movieName h2 {
+    font-size: 26px;
+  }
 
-.footerSocial a{
-    font-size:20px;
-    padding:10px 12px;
-}
+  .movieDetails {
+    width: 100%;
+  }
 
-.footerBottom{
-    font-size:13px;
-    padding:15px;
-}
+  .movieDetails p {
+    font-size: 15px;
+  }
 
+  .allMovieSections {
+    overflow-x: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .movieCard {
+    min-width: 180px;
+  }
+
+  .aboutContent {
+    flex-direction: column;
+  }
+
+  .aboutText {
+    width: 100%;
+  }
+
+  .aboutImage {
+    width: 100%;
+  }
+
+  .aboutTitle h2 {
+    font-size: 28px;
+  }
+
+  .contactContent {
+    flex-direction: column;
+  }
+
+  .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 0 20px 30px 20px;
+  }
+
+  .footerLeft h3 {
+    font-size: 22px;
+  }
+
+  .footerLeft p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .footerSocial {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footerSocial a {
+    font-size: 20px;
+    padding: 10px 12px;
+  }
+
+  .footerBottom {
+    font-size: 13px;
+    padding: 15px;
+  }
 }
